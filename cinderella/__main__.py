@@ -78,7 +78,7 @@ USER_SETTINGS = {}
 
 GDPR = []
 
-START_IMG = "https://telegra.ph/file/de51ba16a8521e59e9da0.mp4"
+START_IMG = "https://telegra.ph/file/132d3f13168cb9b165f81.jpg"
     
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("cinderella.modules." + module_name)
