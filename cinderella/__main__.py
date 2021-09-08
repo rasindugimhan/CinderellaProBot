@@ -33,7 +33,6 @@ _Maintained by_ [{}](tg://user?id={})
 """
 
 
-
 HELP_STRINGS = """
 Hey there! My name is *{}*.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
