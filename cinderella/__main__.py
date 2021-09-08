@@ -27,11 +27,11 @@ from cinderella.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-* Hello there, I'm * [Cozmo](https://t.me/CozmoSupport_Official)
-* I'm a management bot With Cool Modules. Made by * * @CozmoUpdates *
-* Hit * /help * to find my list of available commands *
- 
+_Hello_ *{}*
+_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_Maintained by_ [{}](tg://user?id={})
 """
+
 
 
 HELP_STRINGS = """
