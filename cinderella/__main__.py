@@ -58,8 +58,9 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Sur-vivor/CinderellaProBot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
+⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/TeamInfinitybots/Shizu)
+⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/TeamInfinitybots/Shizu.git)
+⚡Watch the video how to clone me [HERE](https://www.youtube.com/watch?v=fXXEcAkWAFU)
 """
 
 
