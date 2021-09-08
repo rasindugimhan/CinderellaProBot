@@ -27,7 +27,6 @@ from cinderella.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-[😑](https://telegra.ph/file/de51ba16a8521e59e9da0.mp4)
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
 _Maintained by_ [{}](tg://user?id={})
@@ -185,7 +184,7 @@ def send_start(bot, update):
     keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Channel⚜️",url="t.me/CozmoSupport_Official")]]
     keyboard += [[InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
     
-    update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
+    update.effective_message.reply_video(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
 
