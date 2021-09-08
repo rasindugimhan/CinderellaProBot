@@ -26,8 +26,7 @@ from cinderella.modules.connection import connected
 from cinderella.modules.connection import connect_button
 
 
-PM_START_TEXT =
-"""
+PM_START_TEXT = """
 * Hello there, I'm * [Cozmo](https://t.me/CozmoSupport_Official)
 * I'm a management bot With Cool Modules. Made by * * @CozmoUpdates *
 * Hit * /help * to find my list of available commands *
@@ -184,10 +183,9 @@ def send_start(bot, update):
     
     update.effective_message.reply_video(
                 START_IMG,
-                caption=PM_START_TEXT,
+                PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(keyboard),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
             )
 
 def m_connect_button(bot, update):
