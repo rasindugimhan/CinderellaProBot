@@ -26,10 +26,12 @@ from cinderella.modules.connection import connected
 from cinderella.modules.connection import connect_button
 
 
-PM_START_TEXT = """
-_Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-_Maintained by_ [{}](tg://user?id={})
+PM_START_TEXT =
+"""
+* Hello there, I'm * [Cozmo](https://t.me/CozmoSupport_Official)
+* I'm a management bot With Cool Modules. Made by * * @CozmoUpdates *
+* Hit * /help * to find my list of available commands *
+ 
 """
 
 
@@ -176,13 +178,17 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Updates🛡",url="https://t.me/CozmoUpdates")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Channel⚜️",url="t.me/CozmoSupport_Official")]]
+    keyboard = [[InlineKeyboardButton(text="🤝Help🤝",callback_data="help_back"),InlineKeyboardButton(text="🛡Updates🛡",url="https://t.me/CozmoUpdates")]]
+    keyboard += [[InlineKeyboardButton(text="🌐Connect Group🌐", callback_data="main_connect"),InlineKeyboardButton(text="🔱Channel🔱",url="t.me/CozmoSupport_Official")]]
     keyboard += [[InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
     
-    update.effective_message.reply_video(START_IMG, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
-                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
-
+    update.effective_message.reply_video(
+                START_IMG,
+                caption=PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(keyboard),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+            )
 
 def m_connect_button(bot, update):
     bot.delete_message(update.effective_chat.id, update.effective_message.message_id)
